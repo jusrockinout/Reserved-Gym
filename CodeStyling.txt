@@ -1,0 +1,10 @@
+coding standards:
+  whitespace:
+    Indents - Equivalent to 2 spaces. Indent code another line when nesting inside of another block.
+
+  line length:
+    Try for 80 characters, no more than 100
+
+  Brackets: Opening bracket always on the line below. This is for both definitions (functions and classes) and control structures (ifs, elses, switches, etc.)
+
+  Naming: Please try for semantic names. Brief if possible, but always descriptive.
