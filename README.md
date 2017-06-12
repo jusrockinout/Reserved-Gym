@@ -59,7 +59,7 @@ The Reserved Gym is a place for a reserved (introverted) people that would like 
 
 ### Prerequisities
 
- - COMING SOON! 
+ - NodeJS
 
 ## Built With
 
