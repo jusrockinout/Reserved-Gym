@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
         appointment.hasOne(models.client);
+        appointment.hasOne(models.equipment);
       }
     }
   });
