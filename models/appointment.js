@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        appointment.hasOne(models.client);
+        appointment.BelongsTo(models.client);
         appointment.hasOne(models.equipment);
       }
     }
