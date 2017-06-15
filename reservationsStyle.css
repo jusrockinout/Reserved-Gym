@@ -1,4 +1,13 @@
 
+/*LOGO*/
+
+.logo {
+  max-height: auto;
+  max-width: 125px;
+}
+
+
+
 /*NAVBAR*/
 
 .header
@@ -15,6 +24,11 @@
     float: right;
     padding-right: 90px;
     padding-top: 40px;
+}
+
+.navbar:hover
+{
+  color: white;
 }
 
 h1 {
