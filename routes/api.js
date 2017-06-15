@@ -13,11 +13,14 @@ router.get("/machine/id/:id", function(req, res, next) {
   }).then(function(data) {
     res.json(data);
   });
-  res.json();
 });
 
 router.get("/machine/section/:section", function(req, res, next) {
+  db.equipment.findAll({
+    attributes: []
+  }).then(function(data) {
 
+  });
 });
 
 router.get("/machine/type/:type", function(req, res, next) {
