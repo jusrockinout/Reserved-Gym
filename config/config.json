@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Lebe3140",
-    "database": "database_TheReserve",
+    "database": "TheReserve",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
