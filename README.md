@@ -2,7 +2,7 @@
 
 # Description
 
-The Reserved Gym is a place for  reserved or introverted people that would like to reserved highly used in the gym to maximize their time in the gym. In our hypothetical gym our clients will be able to reserve high use machines using our management application. With our management system clients would be able to reserve machines such as Smith Machines, free-weight benches,  pull-up machines, cable machines and etc.
+The Reserved Gym is a place for  reserved or introverted people that would like to reserved highly used in the gym to maximize their time in the gym. In our hypothetical gym our clients will be able to reserve high use machines using our management application. With our management system clients would be able to reserve machines such as Smith Machines, free-weight benches, pull-up machines, cable machines and etc.
 
 # Project URL
 
