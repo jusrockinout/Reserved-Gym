@@ -39,15 +39,16 @@ module.exports = function(sequelize, DataTypes) {
         len: [10, 10],
         isNumeric: true
       }
-    }
-  },
-  {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-        client.hasOne(models.appointments);
-      }
+    },
+    auth_key: {
+      type: DataTypes.STRING
     }
   });
+
+  client.associate = function(models)
+  {
+    client.hasMany(models.appointment);
+  }
+
   return client;
 };
