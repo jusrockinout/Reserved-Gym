@@ -13,6 +13,9 @@ var db = require("./models")
 
 var app = express();
 
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
@@ -48,3 +51,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
