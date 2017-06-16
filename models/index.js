@@ -1,5 +1,6 @@
 'use strict';
 
+require("dotenv").config();
 var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
@@ -7,6 +8,11 @@ var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
+
+if(process.env.password)
+{
+  config.password = process.env.password;
+}
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
@@ -25,6 +31,7 @@ fs
   });
 
 Object.keys(db).forEach(function(modelName) {
+  console.log(modelName);
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

@@ -3,14 +3,13 @@ module.exports = function(sequelize, DataTypes) {
   var appointment = sequelize.define('appointment', {
     time_stamps: DataTypes.DATE,
     duration: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-        appointment.BelongsTo(models.client);
-        appointment.hasOne(models.equipment);
-      }
-    }
   });
+
+  appointment.associate = function(models)
+  {
+    appointment.belongsTo(models.client);
+    appointment.belongsTo(models.equipment);
+  };
+
   return appointment;
 };

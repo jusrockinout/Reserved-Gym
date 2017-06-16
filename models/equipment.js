@@ -4,14 +4,12 @@ module.exports = function(sequelize, DataTypes) {
     machine_name: DataTypes.STRING,
     section: DataTypes.STRING,
     type: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-equipment.hasMany(models.appointment);
-
-      }
-    }
   });
+
+  equipment.associate = function(models)
+  {
+    equipment.hasMany(models.appointment);
+  }
+
   return equipment;
 };
