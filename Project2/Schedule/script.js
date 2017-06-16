@@ -1,35 +1,27 @@
-var t = Handlebars.compile($('#template-row').html());
-var $html = $(t());
+var dp = new DayPilot.Calendar("dp");
 
-function changeDate(){
-  $html.find('.datePicker').datepicker({  
-    minDate: minimumDate("2017-08-10"),
-    maxDate: minimumDate("2017-08-15"),
-  });
-}
+    // view
+    dp.startDate = "2017-06-17";
+    dp.viewType = "Week";
+    
+    // event creating
+    dp.onTimeRangeSelected = function (args) {
+        var name = prompt("Enter Reservation Time", "09:00");
+        if (!name) return;
+        var e = new DayPilot.Event({
+            start: args.start,
+            end: args.end,
+            id: DayPilot.guid(),
+            text: name
+        });
+        dp.events.add(e);
+        dp.clearSelection();
+    };
+    
+    dp.onEventClick = function(args) {
+        alert("clicked: " + args.e.id());
+    };
+    
+    dp.init();
 
-
-$html.find('.datePicker').datepicker({  
-  dateFormat: "d MM yy",
-  minDate: minimumDate("2017-06-04"),
-  maxDate: minimumDate("2017-07-20"),
-});
-$('body').append($html);
-
-
-function minimumDate(minDate) {
-    var date = new Date(minDate);
-    if (date < Date.now()) {
-        return new Date(Date.now());
-    } else {
-        return date;
-    }
-}
-
-function maximumDate(maxDate) {
-    var date = new Date(maxDate);
-    if (date < Date.now()) {
-    } else {
-        return date;
-    }
-}
+    dp.events.add(e);
