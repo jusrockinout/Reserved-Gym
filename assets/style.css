@@ -136,6 +136,7 @@ color:#41F51D;
 .amenities {
   height:250px;
   width: auto;
+  border: solid 5px black;
 }
 
 .shine_me{
