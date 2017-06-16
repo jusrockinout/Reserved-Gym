@@ -41,7 +41,7 @@ h3   {
 }
 body
 {
-    background-image: url(background.jpg);
+    background-image: url("background.jpg");
 }
 
 /*END OF NAVBAR*/
