@@ -28,9 +28,7 @@ router.get("/machine/section/:section", function(req, res, next) {
 });
 
 router.get("/machine/type/:type", function(req, res, next) {
-  db.equipment.findAll({
-    attributes: []
-  }, {
+  db.equipment.findAll({}, {
     where: {
       type: req.params.type
     }

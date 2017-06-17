@@ -6,6 +6,11 @@
 	background-color: black;
 }
 
+.logo {
+  max-height: auto;
+  max-width: 125px;
+}
+
 .navbar
 {
 	font-size: 35px;
@@ -66,7 +71,7 @@ button {
     background-color: #f44336;
 }
 
-.button1 
+.button1
 {
 	border-radius: 15%;
 }
